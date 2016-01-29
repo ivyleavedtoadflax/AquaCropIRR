@@ -25,8 +25,8 @@ soils <- levels(DAPs$soil)
 for (k in 1:2) {
   
   
-# This line reads in from the file of numbers that you created....these numbers could
-# be generated in R of course, if I coudl work exactly where they came from!
+# This line reads in from a file of numbers representing the rainfall distribution.
+# Ideally this would be calculated in R!
   
   randomNumbers <- na.omit(read.table("randomNumbers.csv",sep=",",header=T,))
   
@@ -53,7 +53,7 @@ for (k in 1:2) {
     }
     ) 
     
-    # this line changes teh vector back into a matrix of rows and columns
+    # this line changes the vector back into a matrix of rows and columns
     
     dim(randomNumberMatrix) <- c(nrow(DAPMatrix),10)
     
